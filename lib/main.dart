@@ -35,7 +35,7 @@ class MatApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRouter.home,
+      initialRoute: AppRouter.splashScreenRoute,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
