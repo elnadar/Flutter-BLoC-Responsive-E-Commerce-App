@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constants/strings.dart';
 import '../../../../core/constants/theme.dart';
@@ -41,11 +42,11 @@ class SplashContentComponent extends StatelessWidget {
             width: 245.r,
             child: DecoratedBox(
               decoration: BoxDecoration(
-                  color: themePrimaryLightColor,
+                  color: themeOvalColor,
                   borderRadius: BorderRadius.circular(246.r)),
             ),
           ),
-          Image.asset(
+          SvgPicture.asset(
             image,
             height: 280.h,
             width: 250.w,

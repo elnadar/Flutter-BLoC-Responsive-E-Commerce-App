@@ -10,6 +10,7 @@ const themePrimaryGradientColor = LinearGradient(
 );
 const themeSecondaryColor = Color(0xFF979797);
 const themeTextColor = Color(0xFF757575);
+const themeOvalColor = Color(0xFFFFFAF8);
 
 const themeAnimationDuration = Duration(milliseconds: 200);
 

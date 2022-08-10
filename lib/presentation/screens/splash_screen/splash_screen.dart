@@ -12,6 +12,7 @@ class SplashScreen extends StatelessWidget {
       create: (context) => SplashPointsCubit(),
       child: const Scaffold(
         body: SafeArea(child: SplashScreenBodyComponent()),
+        backgroundColor: Colors.white,
       ),
     );
   }

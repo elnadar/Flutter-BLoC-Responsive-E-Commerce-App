@@ -3,15 +3,15 @@ import '../../../../core/constants/strings.dart';
 const List<Map<String, String>> splashMap = [
   {
     'bodyText': 'Welcome to $appTitle, let\'s shop.',
-    'image': 'assets/images/splash_1.png'
+    'image': 'assets/svg/splash_1.svg'
   },
   {
     'bodyText':
         'We help people connect with store \naround United States of America',
-    'image': 'assets/images/splash_2.png'
+    'image': 'assets/svg/splash_2.svg'
   },
   {
     'bodyText': 'We show the easy way to shop.\nJust stay at home with us.',
-    'image': 'assets/images/splash_3.png'
+    'image': 'assets/svg/splash_3.svg'
   },
 ];
