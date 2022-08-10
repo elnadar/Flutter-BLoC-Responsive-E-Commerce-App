@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/strings.dart';
+import '../../../../core/constants/theme.dart';
 
 class SplashContentComponent extends StatelessWidget {
   const SplashContentComponent({
@@ -16,11 +17,12 @@ class SplashContentComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final MediaQueryData media = MediaQuery.of(context);
 
     return Column(
       children: <Widget>[
-        const Spacer(),
+        SizedBox(
+          height: 52.h,
+        ),
         Text(
           appTitleUpper,
           style:
@@ -33,10 +35,24 @@ class SplashContentComponent extends StatelessWidget {
         const Spacer(
           flex: 2,
         ),
-        Image.asset(
-          image,
-          height: 332.h,
-          width: media.size.width * .9,
+        Stack(alignment: Alignment.center, children: [
+          SizedBox(
+            height: 245.r,
+            width: 245.r,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                  color: themePrimaryLightColor,
+                  borderRadius: BorderRadius.circular(246.r)),
+            ),
+          ),
+          Image.asset(
+            image,
+            height: 280.h,
+            width: 250.w,
+          ),
+        ]),
+        SizedBox(
+          height: 60.h,
         )
       ],
     );

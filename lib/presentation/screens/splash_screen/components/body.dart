@@ -1,32 +1,19 @@
+import 'package:e_commerce_app/logic/cubit/splash_screen_cubit/points_cubit/splash_points_cubit.dart';
 import 'package:e_commerce_app/presentation/screens/splash_screen/components/splash_content.dart';
+import 'package:e_commerce_app/presentation/screens/splash_screen/components/splash_status/splash_status_component.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/strings.dart';
 import '../../../../core/constants/theme.dart';
-
-const List<Map<String, String>> splashMap = [
-  {
-    'bodyText': 'Welcome to $appTitle, let\'s shop.',
-    'image': 'assets/images/splash_1.png'
-  },
-  {
-    'bodyText':
-        'We help people connect with store \naround United States of America',
-    'image': 'assets/images/splash_2.png'
-  },
-  {
-    'bodyText': 'We show the easy way to shop.\nJust stay at home with us.',
-    'image': 'assets/images/splash_3.png'
-  },
-];
+import '../data/splash_contents.dart';
 
 class SplashScreenBodyComponent extends StatelessWidget {
   const SplashScreenBodyComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    // final ThemeData theme = Theme.of(context);
     final MediaQueryData media = MediaQuery.of(context);
 
     return SizedBox(
@@ -34,8 +21,13 @@ class SplashScreenBodyComponent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SizedBox(
-              height: media.size.height * .7,
+              height: media.size.height * .75,
               child: PageView.builder(
+                // controller: pageView
+                onPageChanged: (int index) {
+                  BlocProvider.of<SplashPointsCubit>(context)
+                      .changeActive(index);
+                },
                 itemCount: splashMap.length,
                 itemBuilder: (context, index) {
                   return SplashContentComponent(
@@ -44,6 +36,35 @@ class SplashScreenBodyComponent extends StatelessWidget {
                   );
                 },
               )),
+          SizedBox(
+            height: media.size.height * .25,
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 24.h,
+                ),
+                SplashStatus(length: splashMap.length),
+                const Spacer(),
+                Padding(
+                  padding: EdgeInsets.all(30.r),
+                  child: SizedBox(
+                    width: 315.w,
+                    height: 56.h,
+                    child: TextButton(
+                        style: TextButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.r)),
+                            backgroundColor: themePrimaryColor,
+                            primary: Colors.white,
+                            padding: const EdgeInsets.all(10),
+                            textStyle: TextStyle(fontSize: 18.r)),
+                        onPressed: () {},
+                        child: const Text('Continue')),
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
