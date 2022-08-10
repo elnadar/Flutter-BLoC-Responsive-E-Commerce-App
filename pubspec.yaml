@@ -1,0 +1,68 @@
+name: e_commerce_app
+description: E-Commerce App
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  bloc:
+  hydrated_bloc:
+  flutter_bloc:
+  flutter_svg:
+  cached_network_image:
+  path_provider:
+  flutter_screenutil:
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+  - family: Muli
+    fonts:
+     - asset: assets/fonts/muli/Muli.ttf
+     - asset: assets/fonts/muli/Muli-Bold.ttf
+       weight: 700
+     - asset: assets/fonts/muli/Muli-ExtraLight.ttf
+       weight: 200
+     - asset: assets/fonts/muli/Muli-Light.ttf
+       weight: 300
+     - asset: assets/fonts/muli/Muli-SemiBold.ttf
+       weight: 600
+     - asset: assets/fonts/muli/Muli-Italic.ttf
+       style: italic
+     - asset: assets/fonts/muli/Muli-ExtraLightItalic.ttf
+       weight: 200
+       style: italic
+     - asset: assets/fonts/muli/Muli-LightItalic.ttf
+       weight: 300
+       style: italic
+     - asset: assets/fonts/muli/Muli-BoldItalic.ttf
+       weight: 700
+       style: italic
+     - asset: assets/fonts/muli/Muli-Semi-BoldItalic.ttf
+       weight: 600
+       style: italic
+
+
