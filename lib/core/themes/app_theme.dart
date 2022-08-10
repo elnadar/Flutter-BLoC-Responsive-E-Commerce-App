@@ -10,6 +10,7 @@ class AppTheme {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     fontFamily: 'Muli',
     textTheme: Typography.englishLike2018.apply(fontSizeFactor: .7.sp).copyWith(
+      headline3: const TextStyle(color: themePrimaryColor),
       bodyText1: const TextStyle(color: themeTextColor),
       bodyText2: const TextStyle(color: themeTextColor),
     ),

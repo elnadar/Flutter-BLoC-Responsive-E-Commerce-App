@@ -7,7 +7,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SplashScreenBodyComponent(),
+      body: SafeArea(child: SplashScreenBodyComponent()),
     );
   }
 }
