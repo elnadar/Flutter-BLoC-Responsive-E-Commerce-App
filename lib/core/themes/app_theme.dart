@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../constants/theme.dart';
+
 class AppTheme {
   const AppTheme._();
   static final lightTheme = ThemeData(
-    primarySwatch: Colors.blue,
+    primarySwatch: Colors.orange,
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
+    fontFamily: 'Muli',
+    textTheme: Typography.englishLike2018.apply(fontSizeFactor: .7.sp).copyWith(
+      headline3: const TextStyle(color: themePrimaryColor),
+      bodyText1: const TextStyle(color: themeTextColor),
+      bodyText2: const TextStyle(color: themeTextColor),
+    ),
   );
 
-  static final darkTheme = ThemeData(
-    primarySwatch: Colors.blue,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-    textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-  );
+  static final darkTheme = lightTheme.copyWith();
 }

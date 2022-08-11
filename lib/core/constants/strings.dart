@@ -1,7 +1,6 @@
-class Strings {
-  // App
-  static const appTitle = 'Shoppy';
+// App
+const appTitle = 'Shoppy';
+final String appTitleUpper = appTitle.toUpperCase();
 
-  // HomeScreen
-  static const homeScreenTitle = 'Home Screen';
-}
+// HomeScreen
+const homeScreenTitle = 'Home Screen';

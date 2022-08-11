@@ -31,11 +31,11 @@ class MatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Strings.appTitle,
+      title: appTitle,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRouter.home,
+      initialRoute: AppRouter.splashScreenRoute,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }

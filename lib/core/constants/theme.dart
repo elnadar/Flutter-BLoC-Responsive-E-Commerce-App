@@ -10,6 +10,7 @@ const themePrimaryGradientColor = LinearGradient(
 );
 const themeSecondaryColor = Color(0xFF979797);
 const themeTextColor = Color(0xFF757575);
+const themeOvalColor = Color(0xFFFFFAF8);
 
 const themeAnimationDuration = Duration(milliseconds: 200);
 
@@ -24,7 +25,7 @@ const defaultDuration = Duration(milliseconds: 250);
 
 // Form Error
 final RegExp emailValidatorRegExp =
-RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 const String validationEmailNullError = "Please Enter your email";
 const String validationInvalidEmailError = "Please Enter Valid Email";
 const String validationPassNullError = "Please Enter your password";
@@ -35,8 +36,7 @@ const String validationPhoneNumberNullError = "Please Enter your phone number";
 const String validationAddressNullError = "Please Enter your address";
 
 final otpInputDecoration = InputDecoration(
-  contentPadding:
-  EdgeInsets.symmetric(vertical: 15.w),
+  contentPadding: EdgeInsets.symmetric(vertical: 15.w),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
