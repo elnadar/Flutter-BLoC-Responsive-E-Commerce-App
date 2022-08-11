@@ -25,14 +25,14 @@ class SplashContentComponent extends StatelessWidget {
         Text(
           appTitleUpper,
           style: TextStyle(
-              fontSize: 36.sp,
+              fontSize: 36.r,
               fontWeight: FontWeight.bold,
               color: themePrimaryColor),
         ),
         Text(
           bodyText,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16.sp, color: themeTextColor),
+          style: TextStyle(fontSize: 16.r, color: themeTextColor),
         ),
         const Spacer(),
         Stack(alignment: Alignment.center, children: [
@@ -47,8 +47,8 @@ class SplashContentComponent extends StatelessWidget {
           ),
           SvgPicture.asset(
             image,
-            height: 280.h,
-            width: 250.w,
+            height: 280.r,
+            width: 250.r,
           ),
         ]),
         SizedBox(
