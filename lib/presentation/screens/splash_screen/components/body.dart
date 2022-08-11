@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/theme.dart';
+import '../../../ui_components/default_filled_button.dart';
 import '../data/splash_contents.dart';
 
 class SplashScreenBodyComponent extends StatelessWidget {
@@ -47,19 +48,9 @@ class SplashScreenBodyComponent extends StatelessWidget {
                 const Spacer(),
                 Padding(
                   padding: EdgeInsets.all(30.r),
-                  child: SizedBox(
-                    width: 315.w,
-                    height: 56.h,
-                    child: TextButton(
-                        style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.r)),
-                            backgroundColor: themePrimaryColor,
-                            primary: Colors.white,
-                            padding: const EdgeInsets.all(10),
-                            textStyle: TextStyle(fontSize: 18.r)),
-                        onPressed: () {},
-                        child: const Text('Continue')),
+                  child: DefaultFilledButton(
+                    child: const Text('Continue'),
+                    onPressed: () {},
                   ),
                 )
               ],
