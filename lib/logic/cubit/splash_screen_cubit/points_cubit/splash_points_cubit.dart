@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/theme.dart';
 
 class SplashPointsCubit extends Cubit<int> {
-  SplashPointsCubit() : super(0){
+  SplashPointsCubit() : super(0) {
     pageController = PageController();
   }
+
   late final PageController pageController;
 
   void forwardAction(bool isLast) {

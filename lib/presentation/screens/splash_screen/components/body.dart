@@ -8,8 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../ui_components/default_filled_button.dart';
 import '../data/splash_contents.dart';
 
-
-
 class SplashScreenBodyComponent extends StatelessWidget {
   const SplashScreenBodyComponent({Key? key}) : super(key: key);
 
@@ -24,8 +22,9 @@ class SplashScreenBodyComponent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SizedBox(
-              height: media.size.height * .75,
+              height: media.size.height * .765,
               child: PageView.builder(
+                physics: const BouncingScrollPhysics(),
                 controller: pageCubit.pageController,
                 onPageChanged: (int index) {
                   BlocProvider.of<SplashPointsCubit>(context)
@@ -40,12 +39,9 @@ class SplashScreenBodyComponent extends StatelessWidget {
                 },
               )),
           SizedBox(
-            height: media.size.height * .25,
+            height: media.size.height * .235,
             child: Column(
               children: <Widget>[
-                SizedBox(
-                  height: 24.h,
-                ),
                 SplashStatus(length: splashMap.length),
                 const Spacer(),
                 Padding(
@@ -54,7 +50,8 @@ class SplashScreenBodyComponent extends StatelessWidget {
                     child: Text(pageCubit.state == (splashMap.length - 1)
                         ? 'Let\'s Go'
                         : 'Continue'),
-                    onPressed: () => pageCubit.forwardAction(pageCubit.state == (splashMap.length - 1)),
+                    onPressed: () => pageCubit.forwardAction(
+                        pageCubit.state == (splashMap.length - 1)),
                   ),
                 )
               ],
