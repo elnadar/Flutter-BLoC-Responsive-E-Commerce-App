@@ -23,7 +23,7 @@ class DefaultFilledButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20.r)),
               backgroundColor: themePrimaryColor,
               primary: Colors.white,
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10.r),
               textStyle: TextStyle(fontSize: 18.r)),
           onPressed: onPressed,
           child: child),

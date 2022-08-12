@@ -17,25 +17,24 @@ class SplashContentComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-
     return Column(
       children: <Widget>[
         SizedBox(
-          height: 52.h,
+          height: 94.h,
         ),
         Text(
           appTitleUpper,
-          style:
-              theme.textTheme.headline3!.copyWith(fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: 36.r,
+              fontWeight: FontWeight.bold,
+              color: themePrimaryColor),
         ),
         Text(
           bodyText,
           textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 16.r, color: themeTextColor),
         ),
-        const Spacer(
-          flex: 2,
-        ),
+        const Spacer(),
         Stack(alignment: Alignment.center, children: [
           SizedBox(
             height: 245.r,
@@ -48,12 +47,12 @@ class SplashContentComponent extends StatelessWidget {
           ),
           SvgPicture.asset(
             image,
-            height: 280.h,
-            width: 250.w,
+            height: 280.r,
+            width: 250.r,
           ),
         ]),
         SizedBox(
-          height: 60.h,
+          height: 56.h,
         )
       ],
     );
