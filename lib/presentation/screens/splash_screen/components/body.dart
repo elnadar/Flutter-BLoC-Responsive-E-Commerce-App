@@ -51,7 +51,7 @@ class SplashScreenBodyComponent extends StatelessWidget {
                         ? 'Let\'s Go'
                         : 'Continue'),
                     onPressed: () => pageCubit.forwardAction(
-                        pageCubit.state == (splashMap.length - 1)),
+                        context, pageCubit.state == (splashMap.length - 1)),
                   ),
                 )
               ],
